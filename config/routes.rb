@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/conversations', to: 'conversations#index'
   get '/conversations/new', to: 'conversations#new'
   post '/conversations', to: 'conversations#create'
+  get '/conversations/:id', to: 'conversations#show'
 
 end

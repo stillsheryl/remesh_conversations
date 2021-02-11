@@ -5,7 +5,7 @@
 <% if @conversations.count > 0 %>
   <h2>My Conversations</h2>
   <% @conversations.each do |conversation| %>
-    <p><%= conversation.title %></p>
+    <p><%= link_to conversation.title, "/conversations/#{conversation.id}" %></p>
   <% end %>
 <% else %>
   <p>You currently have no conversations.</p>

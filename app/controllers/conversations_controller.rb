@@ -8,4 +8,8 @@ class ConversationsController < ApplicationController
 
     redirect_to "/conversations"
   end
+
+  def show
+    @conversation = Conversation.find(params["id"])
+  end
 end
