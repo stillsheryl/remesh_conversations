@@ -1,0 +1,7 @@
+<h2>Create a New Conversation</h2>
+
+<%= form_with url: "/conversations", method: :post do |form| %>
+  <%= form.label 'Title' %>
+  <%= form.text_field 'Title' %>
+  <%= form.submit 'Create Conversation' %>
+<% end %>
