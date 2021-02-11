@@ -3,7 +3,6 @@ class CreateConversations < ActiveRecord::Migration[6.1]
     create_table :conversations do |t|
       t.string :title
       t.datetime :start_date
-      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
