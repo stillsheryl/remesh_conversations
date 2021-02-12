@@ -1,0 +1,7 @@
+<h2>Create a New Thought</h2>
+
+<%= form_with url: "/conversations/#{params[:conversation_id]}/messages/#{params[:message_id]}/thoughts", method: :post do |form| %>
+  <%= form.label :text %>
+  <%= form.text_field :text %>
+  <%= form.submit 'Create Thought' %>
+<% end %>

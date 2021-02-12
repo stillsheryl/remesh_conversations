@@ -1,0 +1,7 @@
+<h1>Search Results</h1>
+
+<ul>
+  <% @conversations.each do |conversation| %>
+    <%= link_to conversation.title, conversation_path(conversation.id) %>
+  <% end %>
+</ul>
