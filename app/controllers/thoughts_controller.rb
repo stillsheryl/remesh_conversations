@@ -1,6 +1,5 @@
 class ThoughtsController < ApplicationController
   def new
-
   end
 
   def create
