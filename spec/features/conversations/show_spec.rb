@@ -10,6 +10,6 @@ describe "User can view conversation" do
 
     click_on('Add a Message')
 
-    # expect(current_path).to eq('/messages/new')
+    expect(current_path).to eq("/conversations/#{conversation.id}/messages/new")
   end
 end

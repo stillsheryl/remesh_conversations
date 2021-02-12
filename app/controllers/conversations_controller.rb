@@ -6,7 +6,7 @@ class ConversationsController < ApplicationController
   def create
     conversation = Conversation.create(title: params[:title], start_date: Time.now)
 
-    redirect_to "/conversations"
+    redirect_to conversations_path
   end
 
   def show

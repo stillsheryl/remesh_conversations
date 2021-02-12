@@ -1,11 +1,11 @@
 <h1>Conversations</h1>
 
-<%= link_to "Create a Conversation", '/conversations/new' %>
+<%= link_to "Create a Conversation", new_conversation_path %>
 
 <% if @conversations.count > 0 %>
   <h2>My Conversations</h2>
   <% @conversations.each do |conversation| %>
-    <h3><%= link_to conversation.title, "/conversations/#{conversation.id}" %></h3>
+    <h3><%= link_to conversation.title, conversation_path(conversation.id) %></h3>
     <p><%= conversation.start_date.strftime("%d/%m/%Y") %></p>
   <% end %>
 <% else %>

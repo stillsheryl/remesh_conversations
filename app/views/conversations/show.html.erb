@@ -2,14 +2,14 @@
 
 <p>Date Conversation began: <%= @conversation.start_date.strftime("%d/%m/%Y") %></p>
 
-<%= link_to "Add a Message", "/conversations/#{@conversation.id}/messages/new" %>
+<%= link_to "Add a Message",  new_conversation_message_path(@conversation.id) %>
 
 <% if @conversation.messages.count > 0 %>
   <h2>Messages from this Conversation</h2>
 
   <ul>
     <% @conversation.messages.each do |message| %>
-      <li><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>) <%= link_to 'Add a Thought', "" %></li>
+      <li><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>) <%= link_to 'Add a Thought', "/thoughts" %></li>
     <% end %>
   </ul>
 <% else %>
