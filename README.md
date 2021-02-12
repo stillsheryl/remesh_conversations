@@ -52,27 +52,17 @@ Video demo:
 
 There are a lot of things I would do if I had more time to dedicate to this project. Here are a few:
 
-* Add ability to delete and edit
-
-* Create relationships so when delete a conversation it deletes all related messages and thoughts
-
-* Standardize and re-organize routes.
-
+* Standardize and re-organize routes
 * Use private params for form submissions
-
 * Order conversations by date and time
-
-* Format time for all thoughts
-
+* Format time for all thoughts, messages, and conversations
 * Fix time to show the local time
-
 * Improve nested file structure of tests and controllers
-
-* Edge case testing
-
+* Ad edge case testing
 * Add links to go between pages
-
 * Make search more reliable (downcase to take into account capitalization)
+* Depending on the requirements, I may add the ability to delete conversations
+* Create relationships so when delete a conversation it deletes all related messages and thoughts
 
 ## Author
 
