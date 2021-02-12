@@ -24,6 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Clone the repo: `git clone git@github.com:stillsheryl/remesh_conversations.git`
 - Run `bundle install` to install the dependencies
 - Run `rails db:{create,migrate}` to create the database
+- In order to run locally, run `rails s` and navigate to http://localhost:3000/conversations in your browser.
 
 ### Dependencies
 
