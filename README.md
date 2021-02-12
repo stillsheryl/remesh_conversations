@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Setup:
 - Make a directory to house the application: `mkdir remesh_conversations`
 - Move into the directory: `cd remesh_conversations`
-- Clone the repo: `git clone`
+- Clone the repo: `git clone git@github.com:stillsheryl/remesh_conversations.git`
 - Run `bundle install` to install the dependencies
 - Run `rails db:{create,migrate}` to create the database
 
