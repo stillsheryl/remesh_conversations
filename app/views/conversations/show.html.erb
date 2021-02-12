@@ -1,1 +1,17 @@
 <h1><%= @conversation.title %></h1>
+
+<p><%= @conversation.start_date %></p>
+
+<%= link_to "Add a Message", "/conversations/#{@conversation.id}/messages/new" %>
+
+<% if @conversation.messages.count > 0 %>
+  <h2>Messages from this Conversation</h2>
+
+  <ul>
+    <% @conversation.messages.each do |message| %>
+      <li><%= message.text %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are currently no messages in this conversation.</p>
+<% end %>
