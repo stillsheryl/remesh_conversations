@@ -9,7 +9,14 @@
 
   <ul>
     <% @conversation.messages.each do |message| %>
-      <li><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>) <%= link_to 'Add a Thought', "/thoughts" %></li>
+      <li id="message-<%= message.id %>"><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>) <%= link_to 'Add a Thought', "/conversations/#{@conversation.id}/messages/#{message.id}/thoughts/new" %></li>
+      <% if message.thoughts.count > 0 %>
+        <ul>
+          <% message.thoughts.each do |thought| %>
+            <li><%= thought.text %></li>
+          <% end %>
+        </ul>
+      <% end %>
     <% end %>
   </ul>
 <% else %>
