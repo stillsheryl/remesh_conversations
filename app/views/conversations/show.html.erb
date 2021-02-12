@@ -1,6 +1,6 @@
 <h1><%= @conversation.title %></h1>
 
-<p><%= @conversation.start_date %></p>
+<p>Date Conversation began: <%= @conversation.start_date.strftime("%d/%m/%Y") %></p>
 
 <%= link_to "Add a Message", "/conversations/#{@conversation.id}/messages/new" %>
 
@@ -9,7 +9,7 @@
 
   <ul>
     <% @conversation.messages.each do |message| %>
-      <li><%= message.text %></li>
+      <li><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>)</li>
     <% end %>
   </ul>
 <% else %>

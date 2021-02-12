@@ -1,11 +1,12 @@
-<h1>My Conversations</h1>
+<h1>Conversations</h1>
 
 <%= link_to "Create a Conversation", '/conversations/new' %>
 
 <% if @conversations.count > 0 %>
   <h2>My Conversations</h2>
   <% @conversations.each do |conversation| %>
-    <p><%= link_to conversation.title, "/conversations/#{conversation.id}" %></p>
+    <h3><%= link_to conversation.title, "/conversations/#{conversation.id}" %></h3>
+    <p><%= conversation.start_date.strftime("%d/%m/%Y") %></p>
   <% end %>
 <% else %>
   <p>You currently have no conversations.</p>

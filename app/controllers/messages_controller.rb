@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   def create
     conversation = Conversation.find(params["id"])
 
-    conversation.messages.create(text: params['Text'])
+    conversation.messages.create(text: params['Text'], date_time_sent: Time.now)
 
     redirect_to "/conversations/#{params["id"]}"
   end
