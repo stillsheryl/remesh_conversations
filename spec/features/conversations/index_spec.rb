@@ -27,4 +27,22 @@ describe "User can view conversations and see button to create a new coonversati
 
     expect(current_path).to eq("/conversations/#{hw.id}")
   end
+
+  it "user can search for a conversation by its title" do
+    Conversation.create!(title: "Hello World!", start_date: Time.now)
+    Conversation.create!(title: "Hello", start_date: Time.now)
+    Conversation.create!(title: "What's up", start_date: Time.now)
+
+    visit '/conversations'
+
+    fill_in :title, with: 'Hello'
+
+    click_on 'Submit'
+
+    expect(current_path).to eq('/search')
+
+    expect(page).to have_content('Hello World!')
+    expect(page).to have_content('Hello')
+    expect(page).to_not have_content("What's up")
+  end
 end

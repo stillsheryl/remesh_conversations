@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/conversations/:conversation_id/messages/:message_id/thoughts/new', to: 'thoughts#new'
   post '/conversations/:conversation_id/messages/:message_id/thoughts', to: 'thoughts#create'
+
+  get '/search', to: 'conversations#search'
 end
