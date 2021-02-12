@@ -8,7 +8,7 @@ describe "User can view conversation" do
 
     click_on 'Add a Message'
 
-    fill_in 'Text', with: 'Sending a message!'
+    fill_in :text, with: 'Sending a message!'
     click_on('Create Message')
 
     expect(current_path).to eq("/conversations/#{conversation.id}")

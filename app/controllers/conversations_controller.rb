@@ -4,12 +4,12 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    conversation = Conversation.create(title: params["Title"], start_date: Time.now)
+    conversation = Conversation.create(title: params[:title], start_date: Time.now)
 
     redirect_to "/conversations"
   end
 
   def show
-    @conversation = Conversation.find(params["id"])
+    @conversation = Conversation.find(params[:id])
   end
 end

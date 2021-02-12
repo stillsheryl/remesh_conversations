@@ -4,7 +4,7 @@ describe "User can create a new conversation" do
   it "creates a new conversation linked to the user" do
     visit '/conversations/new'
 
-    fill_in 'Title', with: 'new conversation'
+    fill_in :title, with: 'new conversation'
 
     click_on 'Create Conversation'
 

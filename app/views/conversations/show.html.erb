@@ -9,7 +9,7 @@
 
   <ul>
     <% @conversation.messages.each do |message| %>
-      <li><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>)</li>
+      <li><%= message.text %> (<%= message.date_time_sent.strftime("%I:%M %p") %>) <%= link_to 'Add a Thought', "" %></li>
     <% end %>
   </ul>
 <% else %>

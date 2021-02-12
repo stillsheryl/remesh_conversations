@@ -1,7 +1,7 @@
 <h2>Create a New Message</h2>
 
 <%= form_with url: "/conversations/#{@conversation.id}/messages", method: :post do |form| %>
-  <%= form.label 'Text' %>
-  <%= form.text_field 'Text' %>
+  <%= form.label :text %>
+  <%= form.text_field :text %>
   <%= form.submit 'Create Message' %>
 <% end %>
