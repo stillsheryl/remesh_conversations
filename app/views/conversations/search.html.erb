@@ -2,6 +2,6 @@
 
 <ul>
   <% @conversations.each do |conversation| %>
-    <%= link_to conversation.title, conversation_path(conversation.id) %>
+    <li><%= link_to conversation.title, conversation_path(conversation.id) %></li>
   <% end %>
 </ul>

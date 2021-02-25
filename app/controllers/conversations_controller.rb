@@ -14,6 +14,6 @@ class ConversationsController < ApplicationController
   end
 
   def search
-    @conversations = Conversation.where("title like ?", "%#{params[:title]}%")
+    @conversations = Conversation.where("lower(title) like ?", "%#{params[:title].downcase}%")
   end
 end
